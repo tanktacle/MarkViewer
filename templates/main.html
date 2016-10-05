@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Mark Viewer</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   <link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand" rel="stylesheet">
+
+</head>
+
+<header>
+	<div class="navbar-header">
+	  <a class="navbar-brand" href="/">MarkViewer</a>
+	</div>
+
+</header>
+
+<body>
+
+  <h1 id="quote" style="position:absolute; top: 10%; left: 30%">Tus notas, en un mismo lugar</h1>
+
+
+  <ul class="nav nav-pills" role="tablist">
+    <a href="/dashboard/"><button type="button" class="btn btn-primary" aria-label="Left Align" style="margin-top: 5px; margin-bottom: 5px; height: 44px; margin-right: 15px">
+	   <span class="glyphicon glyphicon-education" style="padding-right: 6px" aria-hidden="true"></span>Notas
+	</button></a>
+  </ul>
+
+  <form action ="/" method="post" style="width:200px; position:absolute; top: 30%; left: 35%">
+	<br>
+	<h4>Login: </h4>
+	<br>
+	<form action="" class="form-inline" method="post">
+		<input type="text" class="form-control" placeholder="Usuario" name="username" value="{{request.form.username}}">
+
+		<input type="password" class="form-control" placeholder="Contraseña" name="password" value="{{request.form.password}}">
+	  <p  style="padding: 10px"><button class="btn btn-primary" type="submit" value="Button">Load</button>
+	  </p>
+	</form>
+
+
+
+</body>
+
+</html>

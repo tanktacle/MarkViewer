@@ -1,0 +1,33 @@
+<script type="text/javascript" src="{{ url_for('static', filename='javascript.js') }}"></script>
+{% extends "header.html" %}
+
+{% block body %}
+
+
+
+<div class="tab-content">
+  <div role="tabpanel" class="tbl-header" id="basics">
+    <table cellpadding="0" cellspacing="0" border="0">
+		<thead>
+			<tr>
+				<th>Asignatura</th>
+				<th>Nota</th>
+			</tr>
+	  </thead>
+    </table>
+  </div>
+  <div class="table-content">
+  <table cellpadding="0" cellspacing="0" border="0">
+	<tbody>
+		{% for clase in nombres %}
+		<tr>
+
+				<td>{{clase}}</td>
+
+		</tr>
+		{% endfor %}
+	</tbody>
+  </table>
+  </div>
+</div>
+{% endblock %}

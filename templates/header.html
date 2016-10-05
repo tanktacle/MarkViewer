@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<header>
+<head>
+   <meta charset="utf-8">
+   <title>Mark Viewer</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+	<div class="navbar-header">
+	  <a class="navbar-brand" href="/">MarkViewer</a>
+	</div>
+
+</header>
+
+<body>
+
+  <div class="border-row" style="width:100%; margin-bottom:15px"></div>
+
+  <div class="container-fluid" align="center" style="min-height:100%">
+  {% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for message in messages %}
+			<div class="alert alert-info" role="alert">
+				{{ message }}
+			</div>
+
+		{% endfor %}
+	{% endif %}
+  {% endwith %}
+
+  {% block body %}{% endblock %}
+
+  </div>
+
+
+</body>
+
+</html>
