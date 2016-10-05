@@ -22,7 +22,7 @@ def homepage():
 			browser = webdriver.PhantomJS(executable_path=r'path\to\phantomjs.exe')
 			browser.set_window_size(1120, 550)
 			browser.implicitly_wait(10)
-			browser.get('http://citm.upc.edu')
+			browser.get(#webpage you'd like to scrap)
 			emailElem = browser.find_element_by_id('username')
 			emailElem.send_keys(username)
 			passwordElem = browser.find_element_by_id('password')
